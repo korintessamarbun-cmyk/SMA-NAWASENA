@@ -1,0 +1,121 @@
+/* ===================================================
+   TEMA WARNA & UTILITY RESMI - SMA NAWASENA
+   Navy Utama : #113665
+   Cream Utama: #D8C8B0
+   =================================================== */
+
+:root {
+  --navy-primary: #113665;
+  --cream-primary: #d8c8b0;
+  --cream-light: #f7f4ef;
+  --text-dark: #212529;
+}
+
+/* PEMBATAS AMAN & FIX STICKY-TOP */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip; /* 'clip' Mencegah overflow horizontal TANPA merusak sticky-top */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--cream-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom Warna Navy & Cream */
+.bg-navy { 
+  background-color: var(--navy-primary) !important; 
+}
+
+.text-navy { 
+  color: var(--navy-primary) !important; 
+}
+
+.bg-cream { 
+  background-color: var(--cream-primary) !important; 
+}
+
+.text-cream { 
+  color: var(--cream-primary) !important; 
+}
+
+/* ==================== 1. HEADER & NAVBAR ==================== */
+header.sticky-top {
+  z-index: 1030; /* Memastikan header selalu melayang paling atas saat di-scroll */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--cream-primary) !important;
+}
+
+/* ==================== 2. HERO CAROUSEL ==================== */
+.hero-carousel .carousel-item {
+  height: 75vh;
+  min-height: 380px;
+}
+
+.hero-carousel img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.55);
+}
+
+.carousel-caption {
+  bottom: 25%;
+}
+
+/* ==================== 3. CARDS & GALERI ==================== */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* Custom Warna Tombol Selengkapnya */
+.btn-warning {
+  background-color: var(--cream-primary) !important; /* Warna Cream khas Nawasena */
+  border-color: var(--cream-primary) !important;
+  color: var(--navy-primary) !important; /* Warna teks Navy */
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.btn-warning:hover {
+  background-color: #c4b39a !important;
+  border-color: #c4b39a !important;
+  color: var(--navy-dark) !important;
+}
